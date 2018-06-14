@@ -1,0 +1,16 @@
+{
+  "name": "NUS-IVLE-for-Google-Sheets",
+  "version": "0.0.1",
+  "description": "Custom Google Sheet functions for NUS IVLE LAPI calls",
+  "repository": "git@github.com:ningyuansg/NUS-IVLE-for-Google-Sheets.git",
+  "author": "ning <ningyuan.sg@gmail.com>",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "build": "mkdir build 2> /dev/null; babel src/index.js -o build/index.gs"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
+  }
+}
