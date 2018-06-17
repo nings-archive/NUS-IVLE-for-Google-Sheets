@@ -8,17 +8,17 @@
  */
 function GET_COURSE_NAME(moduleCode) { return getCourseName(moduleCode); }
 
-function getCourseName_(moduleCode) {
+const getCourseName = moduleCode => {
     response = UrlFetchApp.fetch(ivleUrl(moduleCode));
     body = response.getContentText();
     body = JSON.parse(body);
     mostRecent = body.Results[body.Results.length - 1];
     return mostRecent.CourseName;
-}
+};
 
-function ivleUrl_(moduleCode) {
-    return 'https://ivle.nus.edu.sg/api/Lapi.svc/Modules_Search?APIKey=' +
-        API_KEY + '&ModuleCode=' + moduleCode;
-}
+const ivleUrl = moduleCode => (
+    'https://ivle.nus.edu.sg/api/Lapi.svc/Modules_Search?APIKey=' +
+    API_KEY + '&ModuleCode=' + moduleCode
+);
 
 const API_KEY = process.env.IVLE_KEY;
