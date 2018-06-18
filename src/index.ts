@@ -6,19 +6,18 @@
  * @return {string} The corresponding course name of the module code
  * @customfunction
  */
-function GET_COURSE_NAME(moduleCode) { return getCourseName(moduleCode); }
+function GET_COURSE_NAME(moduleCode: string) { return getCourseName(moduleCode) }
 
-const getCourseName = moduleCode => {
-    response = UrlFetchApp.fetch(ivleUrl(moduleCode));
-    body = response.getContentText();
-    body = JSON.parse(body);
-    mostRecent = body.Results[body.Results.length - 1];
-    return mostRecent.CourseName;
-};
+const getCourseName = (moduleCode: string) => {
+    const response = UrlFetchApp.fetch(ivleUrl(moduleCode))
+    const body = JSON.parse(response.getContentText())
+    const mostRecent = body.Results[body.Results.length - 1]
+    return mostRecent.CourseName
+}
 
-const ivleUrl = moduleCode => (
+const ivleUrl = (moduleCode: string) => (
     'https://ivle.nus.edu.sg/api/Lapi.svc/Modules_Search?APIKey=' +
     API_KEY + '&ModuleCode=' + moduleCode
-);
+)
 
-const API_KEY = process.env.IVLE_KEY;
+const API_KEY = process.env.IVLE_KEY
