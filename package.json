@@ -7,6 +7,7 @@
   "license": "GPL-3.0-only",
   "scripts": {
     "build": "babel src/index.ts -o ./index.gs",
+    "typecheck": "tsc",
     "test": "jest"
   },
   "jest": {
