@@ -6,7 +6,7 @@
   "author": "ning <ningyuan.sg@gmail.com>",
   "license": "GPL-3.0-only",
   "scripts": {
-    "build": "babel src/index.ts -o ./index.gs",
+    "build": "babel src --out-dir dist --extensions .ts --ignore src/**/__tests__",
     "typecheck": "tsc",
     "test": "jest"
   },

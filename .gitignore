@@ -1,3 +1,4 @@
-node_modules
+dist
 index.gs
+node_modules
 yarn-error.log

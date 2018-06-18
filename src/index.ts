@@ -1,3 +1,5 @@
+import { ivleUrl } from './commons'
+
 /**
  * Fetches the course name of a given module code using IVLE's api
  *
@@ -14,10 +16,3 @@ const getCourseName = (moduleCode: string) => {
     const mostRecent = body.Results[body.Results.length - 1]
     return mostRecent.CourseName
 }
-
-const ivleUrl = (moduleCode: string) => (
-    'https://ivle.nus.edu.sg/api/Lapi.svc/Modules_Search?APIKey=' +
-    API_KEY + '&ModuleCode=' + moduleCode
-)
-
-const API_KEY = process.env.IVLE_KEY
