@@ -4,6 +4,12 @@ A Google Sheets add-on providing custom functions for NUS IVLE LAPI calls.
 
 ## Development Setup
 
+Install the development dependencies with yarn.
+
+```bash
+$ yarn
+```
+
 The IVLE LAPI key must be exported as an environment variable.
 
 ```bash
@@ -24,6 +30,7 @@ Google provides some documentation for their scripts API.
   ](https://developers.google.com/apps-script/guides/sheets/functions)
 
 Only block function definitions are parsed as custom functions in Google Sheets.
+As such, functions can be made 'private' using function expressions.
 
 ```javascript
 // this will NOT be parsed as a custom function
