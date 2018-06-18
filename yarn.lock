@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/google-apps-script@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-0.0.24.tgz#32ad574d6deb27f331822359091be63fcc93e7a1"
+
 "@types/node@^10.3.3":
   version "10.3.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.3.3.tgz#8798d9e39af2fa604f715ee6a6b19796528e46c3"

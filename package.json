@@ -9,6 +9,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/google-apps-script": "^0.0.24",
     "@types/node": "^10.3.3",
     "typescript": "^2.9.2"
   }
